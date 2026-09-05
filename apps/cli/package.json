@@ -1,0 +1,26 @@
+{
+  "name": "@ts-starter/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Node CLI example bundled by tsup for the ts-starter monorepo.",
+  "bin": {
+    "ts-starter-cli": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsup",
+    "preview": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@ts-starter/lib": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "tsup": "^8.3.0",
+    "vitest": "^3.0.0"
+  }
+}

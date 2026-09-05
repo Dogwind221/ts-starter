@@ -1,0 +1,11 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+allowBuilds:
+  esbuild: set this to true or false
+
+# pnpm v10+ 默认拦截依赖的 build script。esbuild 需要 postinstall 下载平台二进制，
+# 必须放行，否则 Vite / tsup / Vitest 无法运行。
+onlyBuiltDependencies:
+  - esbuild
